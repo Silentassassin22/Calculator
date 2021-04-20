@@ -8,22 +8,22 @@ namespace Calculator
 {
     class Math
     {
-        public float Add(float i, float j)
+        public double Add(double i, double j)
         {
             return i + j;
         }
 
-        public float Subtract(float i, float j)
+        public double Subtract(double i, double j)
         {
             return i - j;
         }
 
-        public float Multiply(float i, float j)
+        public double Multiply(double i, double j)
         {
             return i * j;
         }
 
-        public float Divide(float i, float j)
+        public double Divide(double i, double j)
         {
             return i / j;
         }

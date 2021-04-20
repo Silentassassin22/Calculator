@@ -20,9 +20,112 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        Calculate Calculate = new Calculate();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public void SetNumber(string number)
+        {
+            Number.Text = number;
+        }
+
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.Reset();
+        }
+
+        private void Divide_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetOperation(4);
+        }
+
+        private void Num7_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetNumber("7");
+        }
+
+        private void Num8_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetNumber("8");
+        }
+
+        private void Num9_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetNumber("9");
+        }
+
+        private void Multiply_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetOperation(3);
+        }
+
+        private void Num4_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetNumber("4");
+        }
+
+        private void Num5_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetNumber("5");
+        }
+
+        private void Num6_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetNumber("6");
+        }
+
+        private void Subtract_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetOperation(2);
+        }
+
+        private void Num1_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetNumber("1");
+        }
+
+        private void Num2_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetNumber("2");
+        }
+
+        private void Num3_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetNumber("3");
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetOperation(1);
+        }
+
+        private void Switch_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Num0_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.SetNumber("0");
+        }
+
+        private void Decimal_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Equals_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Backspace_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.TestNumbers();
         }
     }
 }

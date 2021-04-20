@@ -6,14 +6,54 @@
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="309.615">
-    <Grid>
+    <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Meow"></TextBlock>
-        <TextBlock Grid.Row="1" Text="Meow"></TextBlock>
-        <TextBlock Grid.Row="2" Text="Meow"></TextBlock>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Name="Number" Text="" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="35px" Margin="0,27,0,0" Grid.RowSpan="3"/>
+
+        <TextBlock Name="Operation" Grid.Row="0" FontSize="25px"  Text="+" Margin="3,-2,0,0"/>
+        <TextBlock Name="PreviousNumber" Grid.Row="1" Text="0" Margin="5,0,0,0" FontSize="25" ></TextBlock>
+
+
+        <Button Name="Clear" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3" Content="Clear" Background="#FF49A0DC" Click="Clear_Click"></Button>
+        <Button Name="Backspace" Grid.Row="2" Grid.Column="3" Content="&lt;-" Background="#FF49A0DC" Click="Backspace_Click"></Button>
+        <Button Name="Divide" Grid.Row="3" Grid.Column="3" Content="/" Background="#FF49A0DC" Click="Divide_Click"></Button>
+
+        <Button Name="Num7" Grid.Row="4" Grid.Column="0" Content="7" Background="#FF49A0DC" Click="Num7_Click"/>
+        <Button Name="Num8" Grid.Row="4" Grid.Column="1" Content="8" Background="#FF49A0DC" Click="Num8_Click"/>
+        <Button Name="Num9" Grid.Row="4" Grid.Column="2" Content="9" Background="#FF49A0DC" Click="Num9_Click"/>
+        <Button Name="Multiply" Grid.Row="4" Grid.Column="3" Content="*" Background="#FF49A0DC" Click="Multiply_Click"/>
+
+        <Button Name="Num4" Grid.Row="5" Grid.Column="0" Content="4" Background="#FF49A0DC" Click="Num4_Click"/>
+        <Button Name="Num5" Grid.Row="5" Grid.Column="1" Content="5" Background="#FF49A0DC" Click="Num5_Click"/>
+        <Button Name="Num6" Grid.Row="5" Grid.Column="2" Content="6" Background="#FF49A0DC" Click="Num6_Click"/>
+        <Button Name="Subtract" Grid.Row="5" Grid.Column="3" Content="-" Background="#FF49A0DC" Click="Subtract_Click"/>
+
+        <Button Name="Num1" Grid.Row="6" Grid.Column="0" Content="1" Background="#FF49A0DC" Click="Num1_Click"/>
+        <Button Name="Num2" Grid.Row="6" Grid.Column="1" Content="2" Background="#FF49A0DC" Click="Num2_Click"/>
+        <Button Name="Num3" Grid.Row="6" Grid.Column="2" Content="3" Background="#FF49A0DC" Click="Num3_Click"/>
+        <Button Name="Add" Grid.Row="6" Grid.Column="3" Content="+" Background="#FF49A0DC" Click="Add_Click"/>
+
+        <Button Name="Switch" Grid.Row="7" Grid.Column="0" Content="+/-" Background="#FF49A0DC" Click="Switch_Click"/>
+        <Button Name="Num0" Grid.Row="7" Grid.Column="1" Content="0" Background="#FF49A0DC" Click="Num0_Click"/>
+        <Button Name="Decimal" Grid.Row="7" Grid.Column="2" Content="." Background="#FF49A0DC" Click="Decimal_Click"/>
+        <Button Name="Equals" Grid.Row="7" Grid.Column="3" Content="=" Background="#FF49A0DC" Click="Equals_Click"/>
+
     </Grid>
 </Window>
