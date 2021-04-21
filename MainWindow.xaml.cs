@@ -35,7 +35,7 @@ namespace Calculator
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
-            Calculate.Reset();
+            Calculate.Reset(true);
         }
 
         private void Divide_Click(object sender, RoutedEventArgs e)
@@ -105,7 +105,7 @@ namespace Calculator
 
         private void Switch_Click(object sender, RoutedEventArgs e)
         {
-
+            Calculate.SwitchType();
         }
 
         private void Num0_Click(object sender, RoutedEventArgs e)
@@ -115,15 +115,26 @@ namespace Calculator
 
         private void Decimal_Click(object sender, RoutedEventArgs e)
         {
-
+            Calculate.SetDecimal();
         }
 
         private void Equals_Click(object sender, RoutedEventArgs e)
         {
+            var text = Calculate.Calc();
+
+            if (text != null)
+            {
+                Number.Text = text.ToString();
+            }
 
         }
 
         private void Backspace_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate.Backspace();
+        }
+
+        private void Operation_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Calculate.TestNumbers();
         }
